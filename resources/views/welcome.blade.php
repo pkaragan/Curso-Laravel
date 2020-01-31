@@ -82,6 +82,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                    Mensaje de prueba
                 </div>
 
                 <div class="links">
