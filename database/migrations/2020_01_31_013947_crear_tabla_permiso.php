@@ -17,7 +17,7 @@ class CrearTablaPermiso extends Migration
             $table->increments('id');
             $table->string('nombre',50);
             $table->string('slug',50);
-            $table->timestamps();
+            $table->timestamps('created_at')->useCurrent();
         });
     }
 
