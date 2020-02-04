@@ -111,11 +111,23 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" data-slide="true" href="#">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
-    </ul>
-  </nav>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header"> {{session()->get('nombre_usuario') ?? 'Invitado'}}</span>
+          <div class="dropdown-divider"></div>          
+
+          <div class="pull-left">
+            <a href="{{route('login')}}" class="dropdown-item dropdown-footer">Login</a>
+          </div>
+          <div class="pull-right">
+            <a href="{{route('logout')}}" class="dropdown-item dropdown-footer">Salir</a>
+          </div>        
+        </li>      
+      </ul>                  
+</nav>
   
