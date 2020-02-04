@@ -37,7 +37,8 @@ class PermisoController extends Controller
      */
     public function guardar(Request $request)
     {
-        //
+        Permiso::create($request->all());
+        return redirect('admin/permiso/crear')->with('mensaje','Permiso creado con exito');
     }
 
     /**
@@ -71,7 +72,7 @@ class PermisoController extends Controller
      */
     public function actualizar(Request $request, $id)
     {
-        //
+        return redirect('admin/permiso')->with('mensaje','Permiso actualizado con exito');
     }
 
     /**
