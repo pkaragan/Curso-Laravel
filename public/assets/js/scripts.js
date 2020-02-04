@@ -15,5 +15,7 @@ $(document).ready(function () {
         placement: 'top',
         html: true,
         container: 'body'
-    });
+    });    
+    $('ul.nav.nav-pills.nav-sidebar.flex-column').find('li.active').parents('li').addClass('active');
+    $('a.nav-link').find('a.active').parents('a').addClass('active');
 });

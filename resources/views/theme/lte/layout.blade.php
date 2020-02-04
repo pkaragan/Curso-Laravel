@@ -26,10 +26,10 @@
     <body class="hold-transition sidebar-mini layout-boxed">
         <div class="wrapper">
             <!--Inicio Header-->
-            @include("theme/$theme/header");
+            @include("theme/$theme/header")
             <!--Fin Header-->
             <!--Inicio Aside-->
-            @include("theme/$theme/aside");
+            @include("theme/$theme/aside")
             <!--Fin Aside-->
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
