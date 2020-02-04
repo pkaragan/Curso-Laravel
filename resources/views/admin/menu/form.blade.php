@@ -1,14 +1,14 @@
 <div class="form-group row">
     <label for="nombre" class="col-lg-2 col-form-label requerido text-right">Nombre</label>         
     <div class="col-lg-8">
-        <input type="text" name="nombre" id="nombre" class="form-control ml-3" value="{{old('nombre')}}">
+        <input type="text" name="nombre" id="nombre" class="form-control ml-3" value="{{old('nombre')}}" required/>
     </div>
 </div>
 
 <div class="form-group row">
     <label for="url" class="col-lg-2 col-form-label requerido text-right">Url</label>
     <div class="col-lg-8">
-        <input type="text" name="url" id="url" class="form-control ml-3" value="{{old('url')}}">          
+        <input type="text" name="url" id="url" class="form-control ml-3" value="{{old('url')}}" required/>          
     </div>  
 </div>
 
@@ -17,4 +17,7 @@
     <div class="col-lg-8">
         <input type="text" name="icono" id="icono" class="form-control ml-3" value="{{old('icono')}}"/>
     </div>  
+    <div class="col-lg-1">
+        <span id="mostrar-icono" class="fa fa-fw {{ old("icono")}} "></span>
+    </div>
 </div>
