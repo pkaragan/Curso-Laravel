@@ -11,9 +11,11 @@ Menú - Rol
 <div class="row">
     <div class="col-lg-12">
         @include('includes.mensaje')
-        <div class="card card-success">
+        <div class="card">
             <div class="card-header with-border">
                 <h3 class="card-title">Menús - Rol</h3>
+                <a href="{{ route('crear_permiso') }}" class="btn btn-info btn-sm card-tools ml-3 mr-3">Crear permiso</a>
+                <a href="{{ route('crear_rol') }}" class="btn btn-default border-info btn-sm card-tools">Crear rol</a>                
             </div>
             <div class="card-body">
                 @csrf

@@ -16,9 +16,7 @@ Route::get('seguridad/login', 'Seguridad\LoginController@index')->name('login');
 Route::post('seguridad/login', 'Seguridad\LoginController@login')->name('login-post');
 Route::get('seguridad/logout', 'Seguridad\LoginController@logout')->name('logout');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth','superadmin']], function () {
-    Route::get('','AdminController@index');
-    Route::get('permiso', 'PermisoController@index')->name('permiso');
-    Route::get('permiso/crear', 'PermisoController@crear')->name('crear_permiso');
+    Route::get('','AdminController@index');    
     /*RUTAS DEL MENU*/
     Route::get('menu', 'MenuController@index')->name('menu');
     Route::get('menu/crear', 'MenuController@crear')->name('crear_menu');
@@ -37,4 +35,22 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
     /*RUTAS MENU-ROL*/
     Route::get('menu-rol', 'MenuRolController@index')->name('menu_rol');
     Route::post('menu-rol', 'MenuRolController@guardar')->name('guardar_menu_rol');
+    /*RUTAS PERMISO*/
+    Route::get('permiso', 'PermisoController@index')->name('permiso');
+    Route::get('permiso/crear', 'PermisoController@crear')->name('crear_permiso');
+    Route::post('permiso', 'PermisoController@guardar')->name('guardar_permiso');
+    Route::get('permiso/{id}/editar', 'PermisoController@editar')->name('editar_permiso');
+    Route::put('permiso/{id}', 'PermisoController@actualizar')->name('actualizar_permiso');
+    Route::delete('permiso/{id}', 'PermisoController@eliminar')->name('eliminar_permiso');
+    /*RUTAS PERMISO-ROL*/
+    Route::get('permiso-rol', 'PermisoRolController@index')->name('permiso_rol');
+    Route::post('permiso-rol', 'PermisoRolController@guardar')->name('guardar_permiso_rol');
 });
+
+/*RUTAS LIBRO*/
+Route::get('libro', 'LibroController@index')->name('libro');
+Route::get('libro/crear', 'LibroController@crear')->name('crear_libro');
+Route::post('libro', 'LibroController@guardar')->name('guardar_libro');
+Route::get('libro/{id}/editar', 'LibroController@editar')->name('editar_libro');
+Route::put('libro/{id}', 'LibroController@actualizar')->name('actualizar_libro');
+Route::delete('libro/{id}', 'LibroController@eliminar')->name('eliminar_libro');

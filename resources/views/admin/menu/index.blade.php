@@ -22,8 +22,9 @@ Menú
         <div class="card">
             <div class="card-header without-border">
                 <h3 class="card-title">Menús</h3>
+                <a href="{{ route('crear_menu') }}" class="btn btn-info btn-sm card-tools mr-3">Crear menú</a>
             </div>
-            <div class="card-body">
+            <div class="card-body ml-5">
                 @csrf
                 <div class="dd" id="nestable">
                     <ol class="dd-list">

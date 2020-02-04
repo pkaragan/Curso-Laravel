@@ -16,7 +16,7 @@
             <div class="card-header with-border">
                 <h3 class="card-title">Crear Rol</h3>
                 <div class="card-tools pull-right">
-                    <a href="{{route('rol')}}" class="btn btn-block btn-info btn-sm">
+                    <a href="{{route('rol')}}" class="btn btn-block btn-default btn-sm">
                         <i class="fa fa-fw fa-reply-all"></i> Volver al listado
                     </a>
                 </div>
